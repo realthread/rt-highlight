@@ -1,17 +1,94 @@
+/* Lightening */
 .lightning {
-  background: -webkit-linear-gradient(left, #f44336 0%, #ffc107 100%);
-  background: linear-gradient(to right, #f44336 0%, #ffc107 100%);
-  box-shadow: 0px 3px 3px rgba(0,0,0,.25);
-  color: white !important;
-  font-weight: bold;
-  text-align: center !important;
-  vertical-align: middle !important;
+    color: black !important;
+    position: relative;
+    background: #ffffff;
+    text-align: center !important;
+    vertical-align: middle !important;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.15);
 }
-
+.lightning:after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(-225deg, #ffb600 0%, #FF0000 100%);
+    /* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); */
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 6s ease infinite;
+    -moz-animation: Gradient 6s ease infinite;
+    animation: Gradient 6s ease infinite;
+    position: absolute;
+    left: 0;
+    top: 0%;
+}
 .lightning td {
   color: white !important;
 }
-
 .lightning td a {
   color: white !important;
+}
+
+/* Boom */
+.boom {
+    color: black !important;
+    position: relative;
+    background: #ffffff;
+    text-align: center !important;
+    vertical-align: middle !important;
+    box-shadow: 0px 2px 3px rgba(0,0,0,0.15);
+}
+.boom:after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(-225deg, rgb(76, 255, 0) 0%, rgb(63, 193, 32) 100%) 0% 0% / 400% 400%;
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 6s ease infinite;
+    -moz-animation: Gradient 6s ease infinite;
+    animation: Gradient 6s ease infinite;
+    position: absolute;
+    left: 0;
+    top: 0%;
+}
+.boom td {
+  color: white !important;
+}
+.boom td a {
+  color: white !important;
+}
+/* Animation */
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
 }
