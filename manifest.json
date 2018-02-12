@@ -1,17 +1,13 @@
 {
-  "name": "RT Lightning",
-  "version": "0.0.1",
+  "name": "RT Highlight",
+  "version": "0.0.2",
   "manifest_version": 2,
-  "description": "Style the page",
+  "description": "A simple chrome extension to highlight report rows.",
   "homepage_url": "http://realthread.com",
   "browser_action": {
     "default_title": "Inject!"
   },
-  "permissions": [
-    "https://*/*",
-    "http://*/*",
-    "tabs"
-  ],
+  "permissions": ["https://*/*", "http://*/*", "tabs"],
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
@@ -19,16 +15,9 @@
   },
   "content_scripts": [
     {
-      "matches": [
-        "https://realthread.my.salesforce.com/*"
-      ],
-      "js": [
-        "jquery.js",
-        "inject.js"
-      ],
-      "css": [
-        "lightning.css"
-      ]
+      "matches": ["https://realthread.my.salesforce.com/*"],
+      "js": ["jquery.js", "inject.js"],
+      "css": ["lightning.css"]
     }
   ]
 }
