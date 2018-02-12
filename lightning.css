@@ -1,0 +1,12 @@
+.lightning {
+  background: -webkit-linear-gradient(left, #f44336 0%, #FFC107 100%);
+  background: linear-gradient(to right, #f44336 0%, #FFC107 100%);
+}
+
+.lightning td {
+  color: white !important;
+}
+
+.lightning td a {
+  color: white !important;
+}
