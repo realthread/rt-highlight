@@ -5,7 +5,7 @@
   });
 
   var rtHighlight = {
-    init: function() {
+    init() {
       rtHighlight.setHighlight([3, 14], 'Not Done', 'lightning');
       rtHighlight.setHighlight([3, 14], 'Complete', 'boom');
       rtHighlight.setHighlight(2, '1', 'lightning');
@@ -27,7 +27,7 @@
         });
       }
     },
-    setHighlight: function(range, searchString, classNameToAdd) {
+    setHighlight(range, searchString, classNameToAdd) {
       rtHighlight.getElements(range, searchString).addClass(classNameToAdd);
     }
   };
