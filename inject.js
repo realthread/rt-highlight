@@ -8,7 +8,7 @@
     init() {
       rtHighlight.setHighlight([3, 14], 'Not Done', 'lightning');
       rtHighlight.setHighlight([3, 14], 'Complete', 'boom');
-      rtHighlight.setHighlight(2, '1', 'lightning');
+      rtHighlight.setHighlight(2, '1', 'thunder');
     },
     getElements(range, searchString) {
       if (Array.isArray(range)) {
@@ -21,14 +21,18 @@
           });
       } else {
         return $(
-          '.tabularReportTable td:nth-child(' + range + ').nowrapCell'
+          '.tabularReportTable td:nth-child(' + range + ')'
         ).filter(function() {
           return $(this).text() === searchString;
         });
       }
     },
-    setHighlight(range, searchString, classNameToAdd) {
-      rtHighlight.getElements(range, searchString).addClass(classNameToAdd);
+    setHighlight: function(range, searchString, classNameToAdd) {
+        if(Array.isArray(range)){
+            rtHighlight.getElements(range, searchString).addClass(classNameToAdd);
+        } else {
+            rtHighlight.getElements(range, searchString).closest('tr').addClass(classNameToAdd);
+        }
     }
   };
 })();
