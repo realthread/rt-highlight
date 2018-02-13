@@ -22,11 +22,11 @@
             .addClass('lightning');
       },
       incomplete: function(){
-          $('.tabularReportTable td:nth-child(n+2):nth-child(-n+14):contains(Not Done)')
+          $('.tabularReportTable td:nth-child(n+3):nth-child(-n+14):contains(Not Done)')
           .addClass('lightning');
       },
       complete: function(){
-          $('.tabularReportTable td:nth-child(n+2):nth-child(-n+14):contains(Complete)')
+          $('.tabularReportTable td:nth-child(n+3):nth-child(-n+14):contains(Complete)')
             .addClass('boom');
       }
   }

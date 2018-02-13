@@ -9,7 +9,7 @@
 }
 .lightning:after {
     content: '';
-    height: 2px;
+    height: 3px;
     width: 100%;
     background: linear-gradient(-225deg, #ffb600 0%, #FF0000 100%);
     /* background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB); */
@@ -39,7 +39,7 @@
 }
 .boom:after {
     content: '';
-    height: 2px;
+    height: 3px;
     width: 100%;
     background: linear-gradient(-225deg, rgb(76, 255, 0) 0%, rgb(63, 193, 32) 100%) 0% 0% / 400% 400%;
     background-size: 400% 400%;
