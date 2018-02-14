@@ -32,7 +32,11 @@
       }
     },
     setHighlight(range, searchString, classNameToAdd, exclude) {
-      rtHighlight.getElements(range, searchString, exclude).addClass(classNameToAdd);
+      if (Array.isArray(range)) {
+        rtHighlight.getElements(range, searchString, exclude).addClass(classNameToAdd);
+      } else {
+        rtHighlight.getElements(range, searchString).closest('tr').addClass(classNameToAdd);
+      }
     }
   };
 })();
