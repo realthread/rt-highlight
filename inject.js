@@ -25,28 +25,14 @@
           });
       } else {
         return $(
-<<<<<<< HEAD
           '.tabularReportTable td:nth-child(' + range + ').nowrapCell'
         ).filter(function () {
-=======
-          '.tabularReportTable td:nth-child(' + range + ')'
-        ).filter(function() {
->>>>>>> 65b3774726962f1d0aee68a50381ef6956bf5e88
           return $(this).text() === searchString;
         });
       }
     },
-<<<<<<< HEAD
     setHighlight(range, searchString, classNameToAdd, exclude) {
       rtHighlight.getElements(range, searchString, exclude).addClass(classNameToAdd);
-=======
-    setHighlight: function(range, searchString, classNameToAdd) {
-        if(Array.isArray(range)){
-            rtHighlight.getElements(range, searchString).addClass(classNameToAdd);
-        } else {
-            rtHighlight.getElements(range, searchString).closest('tr').addClass(classNameToAdd);
-        }
->>>>>>> 65b3774726962f1d0aee68a50381ef6956bf5e88
     }
   };
 })();
