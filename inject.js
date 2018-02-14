@@ -6,30 +6,34 @@
 
   var rtHighlight = {
     init() {
-      rtHighlight.setHighlight([3, 14], 'Not Done', 'lightning');
-      rtHighlight.setHighlight([3, 14], 'Complete', 'boom');
+      rtHighlight.setHighlight([11, 13], 'Complete', 'boom');
+      rtHighlight.setHighlight([11, 13], 'Complete', 'lightning', true);
       rtHighlight.setHighlight(2, '1', 'thunder');
     },
-    getElements(range, searchString) {
+    getElements(range, searchString, exclude) {
       if (Array.isArray(range)) {
         return $('.tabularReportTable tr')
           .find(
-            'td:nth-child(n+' + range[0] + '):nth-child(-n+' + range[1] + ')'
+            '> td:nth-child(n+' + range[0] + '):nth-child(-n+' + range[1] + '):not(.nowrapCell)'
           )
           .filter(function () {
-            return $(this).text() === searchString;
+            if (exclude) {
+              return $(this).text() !== searchString;
+            } else {
+              return $(this).text() === searchString;
+            }
           });
       } else {
         return $(
-          '.tabularReportTable td:nth-child(' + range + ')'
+          '.tabularReportTable td:nth-child(' + range + ').nowrapCell'
         ).filter(function () {
           return $(this).text() === searchString;
         });
       }
     },
-    setHighlight: function (range, searchString, classNameToAdd) {
+    setHighlight(range, searchString, classNameToAdd, exclude) {
       if (Array.isArray(range)) {
-        rtHighlight.getElements(range, searchString).addClass(classNameToAdd);
+        rtHighlight.getElements(range, searchString, exclude).addClass(classNameToAdd);
       } else {
         rtHighlight.getElements(range, searchString).closest('tr').addClass(classNameToAdd);
       }
