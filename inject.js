@@ -6,8 +6,8 @@
 
   var rtHighlight = {
     init() {
-      rtHighlight.setHighlight([11, 13], 'Complete', 'boom');
-      rtHighlight.setHighlight([11, 13], 'Complete', 'lightning', true);
+      rtHighlight.setHighlight([11, 15], 'Complete', 'boom');
+      rtHighlight.setHighlight([11, 15], 'Complete', 'lightning', true);
       rtHighlight.setHighlight(2, '1', 'thunder');
     },
     getElements(range, searchString, exclude) {
