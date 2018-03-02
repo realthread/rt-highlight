@@ -9,6 +9,7 @@
       rtHighlight.setHighlight([11, 15], 'Complete', 'boom');
       rtHighlight.setHighlight([11, 15], 'Complete', 'lightning', true);
       rtHighlight.setHighlight(2, '1', 'thunder');
+      rtHighlight.setHighlight(9, Number, 'reOrder');
     },
     getElements(range, searchString, exclude) {
       if (Array.isArray(range)) {
