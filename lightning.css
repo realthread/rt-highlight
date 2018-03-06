@@ -32,6 +32,11 @@
     box-shadow: inset 0 3px #ff3b00;
     background: #ffc6c6 !important;
 }
+/* applies when we check for reorders */
+.reOrder {
+    box-shadow: inset 0 3px #33999e;
+    background: #c6ffff !important;
+}
 /* Boom */
 .boom {
     color: black !important;
@@ -72,11 +77,6 @@
 		background-position: 0% 50%
 	}
 }
-.reOrder {
-    box-shadow: inset 0 3px #36b2ce;
-    background: #bbeaf5 !important;
-}
-
 @-moz-keyframes Gradient {
 	0% {
 		background-position: 0% 50%
